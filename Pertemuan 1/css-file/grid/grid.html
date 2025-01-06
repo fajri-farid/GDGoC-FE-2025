@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        /* 
+        grid-template-columns: 1fr 2fr; artinya membuat dua kolom di grid:
+        Kolom pertama (1fr) memiliki proporsi 1 bagian dari lebar total.
+        Kolom kedua (2fr) memiliki proporsi 2 bagian dari lebar total.
+        */
+        grid-template-rows: auto auto;
+        gap: 10px;
+        height: 100vh;
+      }
+      .header {
+        grid-column: 1 / span 2;
+        /* 
+        Properti CSS grid-column: 1 / span 2; digunakan untuk menentukan posisi dan seberapa banyak kolom 
+        yang akan ditempati oleh elemen di dalam grid.
+
+        1 berarti elemen tersebut akan dimulai dari kolom ke-1.
+        span 2 berarti elemen tersebut akan mengambil 2 kolom (mulai dari kolom ke-1 dan meluas ke kolom 
+        ke-2).
+        */
+        background-color: lightblue;
+      }
+      .sidebar {
+        background-color: lightgreen;
+      }
+      .main-content {
+        background-color: lightcoral;
+      }
+      .footer {
+        grid-column: 1 / span 2;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="main-content">Main Content</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
