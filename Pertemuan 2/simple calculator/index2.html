@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Sederhana</title>
+  </head>
+  <body>
+    <h1>Kalkulator Sederhana</h1>
+    <button onclick="showCalculator()">Buka Kalkulator</button>
+
+    <script>
+      function showCalculator() {
+        let continueCalculating = true;
+        let result;
+
+        while (continueCalculating) {
+          let num1 = parseFloat(prompt("Masukkan angka pertama:"));
+          let operator = prompt("Masukkan operator (+, -, *, /):");
+          let num2 = parseFloat(prompt("Masukkan angka kedua:"));
+
+          if (operator === "+") {
+            result = num1 + num2;
+          } else if (operator === "-") {
+            result = num1 - num2;
+          } else if (operator === "*") {
+            result = num1 * num2;
+          } else if (operator === "/") {
+            result = num1 / num2;
+          } else {
+            alert("Operator tidak valid!");
+            return;
+          }
+
+          alert("Hasil: " + result);
+
+          continueCalculating = confirm(
+            "Apakah Anda ingin melakukan perhitungan lagi?"
+          );
+        }
+
+        alert("Terima kasih telah menggunakan kalkulator!");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Kalkulator Sederhana</h1>
+    <button onclick="showCalculator()">Buka Kalkulator</button>
+
+    <script>
+      function showCalculator() {
+        let num1 = parseFloat(prompt("Masukkan angka pertama:"));
+        let operator = prompt("Masukkan operator (+, -, *, /):");
+        let num2 = parseFloat(prompt("Masukkan angka kedua:"));
+
+        let result;
+
+        if (operator === "+") {
+          result = num1 + num2;
+        } else if (operator === "-") {
+          result = num1 - num2;
+        } else if (operator === "*") {
+          result = num1 * num2;
+        } else if (operator === "/") {
+          result = num1 / num2;
+        } else {
+          alert("Operator tidak valid!");
+          return;
+        }
+
+        alert("Hasil: " + result);
+      }
+    </script>
+  </body>
+</html>

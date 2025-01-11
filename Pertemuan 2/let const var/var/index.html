@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // PERTAMA
+      //   Masalah Hoisting:
+      console.log(umur); // Output: undefined
+      var umur = 25;
+
+      //   KEDUA
+      //   Lingkup (Scope) yang Lebih Longgar:
+      if (true) {
+        var angka = 10;
+      }
+      console.log(angka); // Output: 10 (Walaupun deklarasinya di dalam blok if)
+    </script>
+  </body>
+</html>
